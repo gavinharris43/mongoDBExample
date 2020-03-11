@@ -16,7 +16,7 @@ object runnerPerson extends App {
   val codecRegistry = fromRegistries(fromProviders(classOf[Person]), DEFAULT_CODEC_REGISTRY )
   val mongoClient: MongoClient = MongoClient()
   val database: MongoDatabase = mongoClient.getDatabase("mydb").withCodecRegistry(codecRegistry)
-  val collection: MongoCollection[Person] = database.getCollection("person")
+  val collection: MongoCollection[Person] = database.getCollection("day8/person")
   val fNameMsg = "Enter First Name:"
   val lNameMsg = "Enter Last Name "
   val running = new Running(true)
